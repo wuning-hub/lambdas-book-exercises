@@ -16,4 +16,10 @@ public class IterationTest {
         Iteration iteration = new Iteration();
         iteration.internalCountArtistsFromLondonPrinted(SampleData.membersOfTheBeatles);
     }
+
+    @Test
+    public void  firstTest(){
+        Iteration iteration =new Iteration();
+        iteration.filterArtistsFromLondonPrinted(SampleData.membersOfTheBeatles);
+    }
 }
