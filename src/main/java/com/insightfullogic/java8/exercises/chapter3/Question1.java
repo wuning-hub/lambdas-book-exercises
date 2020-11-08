@@ -21,4 +21,8 @@ public class Question1 {
     public static List<Album> getAlbumsWithAtMostThreeTracks(List<Album> input) {
         return Exercises.replaceThisWithSolution();
     }
+
+    public static List<String> getNameAndNation(List<Artist> artists){
+        return Exercises.replaceThisWithSolution();
+    }
 }

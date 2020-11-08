@@ -6,6 +6,7 @@ import com.insightfullogic.java8.examples.chapter1.Track;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toSet;
 
@@ -29,8 +30,20 @@ public class Refactor {
             }
             return trackNames;
         }
-// END findLongTracks_0
+        // END findLongTracks_0
     }
+    public static class Step5 implements LongTrackFinder {
+        // BEGIN findLongTracks_0
+        public Set<String> findLongTracks(List<Album> albums) {
+            return albums.stream()
+                    .flatMap(Album::getTracks)
+                    .filter(track -> track.getLength()>60)
+                    .map(Track::getName)
+                    .collect(toSet());
+        }
+        // END findLongTracks_0
+    }
+
 
     public static class Step1 implements LongTrackFinder {
         // BEGIN findLongTracks_1
